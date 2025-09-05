@@ -2,7 +2,7 @@ name: Conditions workflow
 on: push
 jobs:
   skip-or-run:
-    if: ${{ github.actor == 'NAVYSHUNTA' }}
+    if: ${{ github.actor == 'SHUNTA' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
