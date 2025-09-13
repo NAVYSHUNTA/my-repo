@@ -11,5 +11,7 @@ concurrency:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - run: docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
+      - run: |
+        docker run --rm -v "$(pwd):$(pwd)" -w "$(pwd)" rhysd/actionlint:latest
